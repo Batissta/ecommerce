@@ -1,0 +1,54 @@
+#criarConta .container-box {
+    display: flex;
+  }
+  
+  #criarConta h1 {
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  #criarConta label {
+    font-family: Montserrat;
+    display: flex;
+    margin-bottom: 5px;
+  }
+  
+  #criarConta p {
+    font-family: Montserrat;
+    margin: 16px 0;
+  }
+  #criarConta .inputs-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #criarConta .inputs-box input[type="text"],[type="password"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: Montserrat;
+    margin-bottom: 20px;
+  }
+  #criarConta .button {
+    width: 100%;
+    font-family: "Montserrat";
+    font-weight: 400;
+    background-color: black;
+    color: #fff;
+    padding: 12px 16px;
+    transition: 150ms;
+    font-size: 1.1em;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  #criarConta .button:hover {
+    background-color: #f3f3f3;
+    color: #000;
+    cursor: pointer;
+  }
+
+ 
+  
+  
+  

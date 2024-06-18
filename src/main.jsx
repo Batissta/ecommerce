@@ -4,6 +4,7 @@ import Home from "./routes/Home.jsx";
 import Login from "./routes/Login.jsx";
 import Produtos from "./routes/Produtos.jsx";
 import EsqueciSenha from "./routes/EsqueciSenha.jsx";
+import CriarConta from "./routes/CriarConta.jsx";
 
 import ReactDOM from "react-dom/client";
 import React from "react";
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "forgetPass",
         element: <EsqueciSenha />,
+      },
+      {
+        path: "cadastro",
+        element: <CriarConta />,
       },
     ],
   },

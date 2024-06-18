@@ -31,7 +31,7 @@ const Login = () => {
             <Link className="link" to="/forgetPass">
               Esqueceu sua senha?
             </Link>
-            <Link className="link" to="/">
+            <Link className="link" to="/cadastro">
               Criar conta
             </Link>
           </div>
