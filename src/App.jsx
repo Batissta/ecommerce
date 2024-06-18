@@ -4,6 +4,7 @@ import React from "react";
 
 function App() {
   const [ativo, setAtivo] = React.useState(false);
+
   return (
     <>
       <Header ativo={ativo} setAtivo={setAtivo} />

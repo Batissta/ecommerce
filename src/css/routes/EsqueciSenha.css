@@ -1,0 +1,52 @@
+#esqueceu .container-box {
+  display: flex;
+}
+
+#esqueceu h1 {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#esqueceu label {
+  font-family: Montserrat;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#esqueceu p {
+  font-family: Montserrat;
+  margin: 16px 0;
+}
+#esqueceu .inputs-box {
+  display: flex;
+  flex-direction: column;
+}
+
+#esqueceu .inputs-box input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: Montserrat;
+  margin-bottom: 20px;
+}
+
+#esqueceu .button {
+  width: 100%;
+  font-family: "Montserrat";
+  font-weight: 400;
+  background-color: black;
+  color: #fff;
+  padding: 12px 16px;
+  transition: 150ms;
+  font-size: 1.1em;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#esqueceu .button:hover {
+  background-color: #f3f3f3;
+  color: #000;
+  cursor: pointer;
+}
+
+

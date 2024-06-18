@@ -1,4 +1,4 @@
-#login-form h2 {
+#login-form h1 {
   margin-bottom: 24px;
   text-align: center;
   font-size: 2rem;
@@ -35,16 +35,4 @@
   background-color: #f3f3f3;
   color: #000;
   cursor: pointer;
-}
-
-.links-cad {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1.8rem;
-  padding-left: 1px;
-  padding-right: 10px;
-  font-size: 0.9rem;
-}
-.links-cad a {
-  color: #000;
 }

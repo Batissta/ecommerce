@@ -10,7 +10,7 @@ const EsqueciSenha = () => {
   return (
     <>
       <div id="esqueceu" className="container-box">
-        <h1>Recuperar Senha</h1>
+        <h1>RECUPERAR SENHA</h1>
         <p>
           Insira seu e-mail ou número de telefone associado à sua conta para
           receber instruções de como redefinir sua senha.
@@ -20,11 +20,9 @@ const EsqueciSenha = () => {
             <label htmlFor="email">E-mail ou número de telefone:</label>
             <input type="text" id="email" name="email" />
           </div>
-          <div className="button">
-            <button type="submit" onClick={handleRedirect}>
-              Enviar
-            </button>
-          </div>
+          <button className="button" type="submit" onClick={handleRedirect}>
+            Enviar
+          </button>
         </form>
       </div>
     </>

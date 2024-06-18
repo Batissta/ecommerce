@@ -7,7 +7,7 @@ const Login = () => {
     <>
       <div id="login" className="container-box">
         <form id="login-form">
-          <h2>LOGIN</h2>
+          <h1>LOGIN</h1>
           <div className="inputs-box">
             <label htmlFor="username">Usuário:</label>
             <input
@@ -28,8 +28,12 @@ const Login = () => {
             Entrar
           </button>
           <div className="links-cad">
-            <Link to="/forgetPass">Esqueceu sua senha?</Link>
-            <Link to="/">Criar conta</Link>
+            <Link className="link" to="/forgetPass">
+              Esqueceu sua senha?
+            </Link>
+            <Link className="link" to="/">
+              Criar conta
+            </Link>
           </div>
         </form>
       </div>

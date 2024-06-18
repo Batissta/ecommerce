@@ -40,3 +40,17 @@ button {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.links-cad {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.8rem;
+  padding-left: 1px;
+  padding-right: 10px;
+  font-size: 0.9rem;
+}
+
+.links-cad .link {
+  color: #425674;
+  text-decoration: underline;
+}
