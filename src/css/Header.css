@@ -7,7 +7,17 @@
 }
 
 .header h1 {
-  font-family: "futura-medium", monospace;
+  font-family: "DM Serif Display", monospace;
+}
+
+.buttonMenu {
+  height: 32px;
+  width: 32px;
+}
+
+.buttonMenu:hover {
+  cursor: pointer;
+  scale: 1.05;
 }
 
 .navBar {

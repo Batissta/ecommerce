@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const ButtonMenu = () => {
+const ButtonMenu = ({ handleClick }) => {
   return (
-    <button></button>
-  )
-}
+    <button onClick={handleClick} className="buttonMenu">
+      <img src="src\assets\cardapio.png" alt="" />
+    </button>
+  );
+};
 
-export default ButtonMenu
+export default ButtonMenu;

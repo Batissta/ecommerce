@@ -1,0 +1,50 @@
+#login-form h2 {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#login-form label {
+  font-family: Montserrat;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  width: 480px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: Montserrat;
+  margin-bottom: 20px;
+}
+
+#login-form .button {
+  font-family: "Montserrat";
+  font-weight: 400;
+  background-color: black;
+  color: #fff;
+  padding: 12px 16px;
+  transition: 150ms;
+  font-size: 1.1em;
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#login-form .button:hover {
+  background-color: #f3f3f3;
+  color: #000;
+  cursor: pointer;
+}
+
+.links-cad {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.8rem;
+  padding-left: 1px;
+  padding-right: 10px;
+  font-size: 0.9rem;
+}
+.links-cad a {
+  color: #000;
+}

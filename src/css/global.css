@@ -1,9 +1,12 @@
-
-
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 h1,
@@ -19,6 +22,21 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.container-box {
+  max-width: 500px;
+  margin: 90px auto;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

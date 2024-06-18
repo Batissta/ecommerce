@@ -1,13 +1,14 @@
-// Rotas
+// rotas
 import App from "./App.jsx";
 import Home from "./routes/Home.jsx";
 import Login from "./routes/Login.jsx";
 import Produtos from "./routes/Produtos.jsx";
-import Produto from "./routes/Produto.jsx";
+import EsqueciSenha from "./routes/EsqueciSenha.jsx";
 
 import ReactDOM from "react-dom/client";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 // css
 import "./css/style.css";
 
@@ -29,13 +30,13 @@ const router = createBrowserRouter([
         element: <Produtos />,
       },
       {
-        path: "/produtos/:id",
-        element: <Produto />,
+        path: "forgetPass",
+        element: <EsqueciSenha />,
       },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <RouterProvider router={router} />
+  <RouterProvider router={router} />
 );
