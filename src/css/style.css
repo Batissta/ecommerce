@@ -1,0 +1,6 @@
+/* Fonts */
+@import url("https://fonts.cdnfonts.com/css/futura-medium");
+
+/* CSS */
+@import "./global.css";
+@import "./Header.css";
