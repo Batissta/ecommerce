@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer container">
       <div className="footerLogo">
         <img src={logoGrande} alt="" />
       </div>

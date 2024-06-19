@@ -1,4 +1,4 @@
-.header-bg {
+/* .header-bg {
   background-color: #e9e9e9;
 }
 
@@ -13,7 +13,7 @@
   font-family: "DM Serif Display", monospace;
 }
 
-.buttonMenu {
+.buttonMenu img {
   height: 32px;
   width: 32px;
 }
@@ -21,5 +21,24 @@
 .buttonMenu:hover {
   cursor: pointer;
   scale: 1.05;
+} */
+
+.header {
+  padding: 20px;
+  box-sizing: border-box;
+  height: 70px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
+.header a img {
+  max-width: 200px;
+}
+
+@media (width <= 600px) {
+  body {
+    background-color: azure;
+  }
+}

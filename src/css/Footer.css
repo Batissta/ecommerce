@@ -3,8 +3,7 @@
   grid-template-columns: 1fr 1fr;
 }
 .footerLogo img {
-  margin: 0 auto;
-  width: 50%;
+  width: 30%;
 }
 
 .footer .navBar .link {

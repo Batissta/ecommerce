@@ -1,20 +1,20 @@
 /* Fazer o css do modal */
-.modalSection {
-  position: relative;
+.buttonMenu {
+  width: 32px;
+  height: 32px;
 }
 
-.modal {
-  position: absolute;
-  background-color: rgb(255, 255, 255);
-  width: 120px;
-  border: 2px solid black;
-  right: 24px;
+.menu {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.modal .link {
+.modal .menu a {
   text-align: center;
   color: black;
-  padding: 10px;
-  border-top: 1px solid #0c0c0c;
-  border-bottom: 1px solid #0c0c0c;
+  padding: 20px;
+}
+
+.modal .menu a:hover {
+  background: rgba(0, 0, 0, 0.5);
 }

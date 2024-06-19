@@ -6,22 +6,32 @@ import { Link } from "react-router-dom";
 const Modal = ({ handleClick, ativo }) => {
   return (
     <>
-      <section className="modalSection">
+      <nav className="modal">
         <ButtonMenu handleClick={handleClick} />
         {ativo && (
-          <nav className="modal">
-            <Link className="link" to="/" style={{ display: "block" }}>
-              Home
-            </Link>
-            <Link className="link" to="/login" style={{ display: "block" }}>
-              Login
-            </Link>
-            <Link className="link" to="/produtos" style={{ display: "block" }}>
-              Produtos
-            </Link>
-          </nav>
+          <ul className="menu">
+            <li>
+              <Link className="link" to="/" style={{ display: "block" }}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="/login" style={{ display: "block" }}>
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="link"
+                to="/produtos"
+                style={{ display: "block" }}
+              >
+                Produtos
+              </Link>
+            </li>
+          </ul>
         )}
-      </section>
+      </nav>
     </>
   );
 };
