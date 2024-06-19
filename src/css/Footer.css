@@ -1,0 +1,12 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footerLogo img {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.footer .navBar .link {
+  color: rgb(46, 46, 46);
+}

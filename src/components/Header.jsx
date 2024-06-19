@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
-import ButtonMenu from "./ButtonMenu";
+
+import Modal from "./Modal";
 
 const Header = ({ ativo, setAtivo }) => {
   const handleClick = () => {
@@ -9,26 +10,15 @@ const Header = ({ ativo, setAtivo }) => {
   };
 
   return (
-    <header className="header">
-      <Link to="/" style={{ color: "#121212" }}>
-        <h1>Ecommerce</h1>
-      </Link>
+    <header className="header-bg">
+      <div className="header container">
+        <Link to="/" style={{ color: "#121212" }}>
+          <h1>Ecommerce</h1>
+        </Link>
 
-      <div className="menu">
-        <ButtonMenu handleClick={handleClick} />
-        {ativo && (
-          <nav className="navBar">
-            <Link to="/" style={{ display: "block" }}>
-              Home
-            </Link>
-            <Link to="/login" style={{ display: "block" }}>
-              Login
-            </Link>
-            <Link to="/produtos" style={{ display: "block" }}>
-              Produtos
-            </Link>
-          </nav>
-        )}
+        <div className="menu">
+          <Modal handleClick={handleClick} ativo={ativo} />
+        </div>
       </div>
     </header>
   );

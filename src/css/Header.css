@@ -1,6 +1,9 @@
+.header-bg {
+  background-color: #e9e9e9;
+}
+
 .header {
   display: flex;
-  background-color: #e9e9e9;
   justify-content: space-between;
   padding: 20px 40px;
   align-items: center;
@@ -20,12 +23,3 @@
   scale: 1.05;
 }
 
-.navBar {
-  display: flex;
-  gap: 1rem;
-}
-
-.navBar a {
-  display: flex;
-  gap: 1rem;
-}

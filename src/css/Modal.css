@@ -1,0 +1,20 @@
+/* Fazer o css do modal */
+.modalSection {
+  position: relative;
+}
+
+.modal {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 120px;
+  border: 2px solid black;
+  right: 24px;
+}
+
+.modal .link {
+  text-align: center;
+  color: black;
+  padding: 10px;
+  border-top: 1px solid #0c0c0c;
+  border-bottom: 1px solid #0c0c0c;
+}

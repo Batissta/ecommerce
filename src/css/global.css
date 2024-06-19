@@ -32,6 +32,13 @@ button {
   background-color: transparent;
 }
 
+.container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+  align-items: center;
+}
+
 .container-box {
   max-width: 500px;
   margin: 90px auto;

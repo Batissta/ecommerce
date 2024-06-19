@@ -10,28 +10,42 @@ const CriarConta = () => {
   };
   return (
     <>
-       <div id="criarConta" class="container-box">
+      <div id="criarConta" class="container-box">
         <form action="#">
-            <h2>CADASTRO</h2>
-        <div class="inputs-box">
+          <h1>CADASTRO</h1>
+          <div class="inputs-box">
             <label for="username">Nome:</label>
-            <input type="text" id="username" name="username" placeholder="Digite seu nome completo"/>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Digite seu nome completo"
+            />
             <label for="username">Email:</label>
-            <input type="text" id="username" name="username" placeholder="Digite seu email"/>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Digite seu email"
+            />
             <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" placeholder="Crie uma senha"/>
-        </div>
-        <button className="button" type="submit" onClick={handleRedirect}>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Crie uma senha"
+            />
+          </div>
+          <button className="button" type="submit" onClick={handleRedirect}>
             Enviar
           </button>
-        <div class="links-cad">
-          <Link className="link" to="/login">
+          <div class="links-cad">
+            <Link className="link" to="/login">
               Já possui uma conta?
             </Link>
-            </div>
+          </div>
         </form>
       </div>
-      
     </>
   );
 };
