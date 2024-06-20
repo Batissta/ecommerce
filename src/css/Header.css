@@ -10,8 +10,10 @@
 }
 
 .headerNav {
+  padding: 0 30px 0 20px;
   align-items: center;
   display: flex;
+  position: relative;
   justify-content: space-between;
   height: 4rem;
 }

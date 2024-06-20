@@ -7,7 +7,6 @@ const Modal = ({ mobile }) => {
   const handleClick = () => {
     setAtivo((ativo) => !ativo);
   };
-
   return (
     <>
       {mobile && (
@@ -15,26 +14,31 @@ const Modal = ({ mobile }) => {
           <img src="src\assets\cardapio.png" alt="" />
         </button>
       )}
-      {(!mobile || ativo) &&  <nav className="modal">
-        <ul className="menu">
-          <li>
-            <Link className="link" to="/" style={{ display: "block" }}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className="link" to="/login" style={{ display: "block" }}>
-              Login
-            </Link>
-          </li>
-          <li>
-            <Link className="link" to="/produtos" style={{ display: "block" }}>
-              Produtos
-            </Link>
-          </li>
-        </ul>
-      </nav>}
-      
+      {!mobile && (
+        <nav className="modal">
+          <ul className="menu">
+            <li>
+              <Link className="link" to="/" style={{ display: "block" }}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="/login" style={{ display: "block" }}>
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="link"
+                to="/produtos"
+                style={{ display: "block" }}
+              >
+                Produtos
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      )}
     </>
   );
 };
