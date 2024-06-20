@@ -14,7 +14,7 @@ const Modal = ({ mobile }) => {
           <img src="src\assets\cardapio.png" alt="" />
         </button>
       )}
-      {!mobile && (
+      {(!mobile || ativo) && (
         <nav className="modal">
           <ul className="menu">
             <li>

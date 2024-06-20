@@ -3,7 +3,7 @@
   width: 32px;
   height: 32px;
   position: absolute;
-  right: 0;
+  right: 20px;
   z-index: 100;
 }
 
@@ -23,14 +23,22 @@
 }
 
 @media (width <= 600px) {
+  .buttonMenu {
+    order: 1;
+    border: 1px solid rgba(252, 252, 252, 0.575);
+    border-radius: 4px;
+  }
   .modal {
     position: relative;
     z-index: 0;
     right: -30px;
     padding: 4rem 0 1rem 0;
-    top: 0;
-    background-color: rgba(58, 58, 58, 0.8);
+    top: 60px;
+    background-color: rgb(58, 58, 58);
     backdrop-filter: blur(50px);
+    animation: show 0.4s;
+    border-radius: 0px 0px 0px 4px;
+    box-shadow: inset -2px -2px rgb(0, 0, 0);
   }
   .menu {
     position: relative;
@@ -38,6 +46,8 @@
     padding: 0 20px;
   }
   .modal .menu a {
+    animation: show 0.8s;
+
     color: whitesmoke;
     font-weight: 200;
     font-family: "Montserrat";
@@ -45,11 +55,37 @@
     display: flex;
   }
   .modal .menu a::after {
+    animation: show 0.7s;
     content: "";
-    background: #333;
+    background: #727272;
     height: 1px;
     width: 80%;
-    margin: 0 auto;
+    margin: 4px auto 0 auto;
     display: block;
+  }
+}
+
+@media (width <= 380px) {
+  .modal {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    animation: show 0.4s;
+  }
+  .modal .menu a {
+    padding: 8px 12px;
+    font-size: 0.825rem;
+    display: flex;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

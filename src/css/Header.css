@@ -20,10 +20,13 @@
 
 .header a img {
   max-width: 200px;
+  position: relative;
+  left: -20px;
 }
 
 @media (width <= 600px) {
-  body {
-    background-color: azure;
+  .header a img {
+    max-width: 180px;
+    left: -40px;
   }
 }
