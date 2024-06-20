@@ -4,6 +4,9 @@
   top: 0;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff17;
+  backdrop-filter: blur(2px);
+  filter: grayscale(100px);
 }
 
 .headerNav {

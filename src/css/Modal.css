@@ -15,6 +15,6 @@
   padding: 20px;
 }
 
-.modal .menu a:hover {
-  background: rgba(0, 0, 0, 0.5);
+.modal .menu a:hover::after {
+  color: rgba(80, 80, 80, 0.1);
 }
