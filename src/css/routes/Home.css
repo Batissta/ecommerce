@@ -1,0 +1,45 @@
+.homeMain.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 40px auto;
+  gap: 20px;
+}
+
+.homeMain img {
+  width: 340px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.marcas {
+  overflow: hidden;
+  max-width: 600px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  height: 90px;
+}
+
+.marcas img {
+  height: 90%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.marcas img {
+  filter: blur(1px);
+  transition: 0.2s;
+}
+.marcas img:hover {
+  filter: blur(0px);
+  position: relative;
+  scale: 1.1;
+}
+@media (width < 1000px) {
+  .marcas img {
+    filter: blur(0);
+  }
+  .marcas img:hover {
+    scale: 1.2;
+  }
+}
