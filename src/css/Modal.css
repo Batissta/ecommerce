@@ -18,27 +18,40 @@
   padding: 20px;
 }
 
+.modal .menu a::after {
+  content: '';
+  display: block;
+  position: relative;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  background-color: #333;
+  transition: 0.3s;
+}
 .modal .menu a:hover::after {
-  color: rgba(80, 80, 80, 0.1);
+  width: 100%;
 }
 
 @media (width <= 600px) {
   .buttonMenu {
     order: 1;
-    border: 1px solid rgba(252, 252, 252, 0.575);
     border-radius: 4px;
+    transition: 0.2s;
+  }
+  .buttonMenu.ativo {
+    border: 1px solid rgb(29, 29, 29);
+    rotate: 90deg;
   }
   .modal {
     position: relative;
     z-index: 0;
     right: -30px;
-    padding: 4rem 0 1rem 0;
+    padding: 4rem 0 2rem 0;
     top: 60px;
-    background-color: rgb(58, 58, 58);
-    backdrop-filter: blur(50px);
-    animation: show 0.4s;
+    background-color: #ffffffb0;
+    animation: show 0.2s;
     border-radius: 0px 0px 0px 4px;
-    box-shadow: inset -2px -2px rgb(0, 0, 0);
+    box-shadow: -2px -2px rgb(0, 0, 0), inset -2px -2px rgb(0, 0, 0);
   }
   .menu {
     position: relative;
@@ -46,22 +59,24 @@
     padding: 0 20px;
   }
   .modal .menu a {
-    animation: show 0.8s;
-
-    color: whitesmoke;
-    font-weight: 200;
-    font-family: "Montserrat";
+    animation: show 0.3s;
+    color: rgb(29, 29, 29);
+    font-weight: 600;
+    font-family: 'Montserrat';
     padding: 4px 8px;
     display: flex;
   }
   .modal .menu a::after {
-    animation: show 0.7s;
-    content: "";
-    background: #727272;
+    animation: show 0.3s;
+    content: '';
+    background: rgb(29, 29, 29);
     height: 1px;
     width: 80%;
     margin: 4px auto 0 auto;
     display: block;
+  }
+  .modal .menu a:hover::after {
+    color: rgba(80, 80, 80, 0.1);
   }
 }
 
@@ -82,10 +97,10 @@
 @keyframes show {
   0% {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateX(100px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }

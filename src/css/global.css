@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+#root {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 4rem 0 0 0;
@@ -63,4 +67,9 @@ button {
 .links-cad .link {
   color: #425674;
   text-decoration: underline;
+}
+
+.dotGray {
+  color: #879132;
+  font-weight: 600;
 }

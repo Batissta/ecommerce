@@ -1,0 +1,73 @@
+.marcasArea {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 120px auto;
+}
+
+.marcasArea h2 {
+  font-family: 'Poppins';
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.marcasLista {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+
+.marcasLista a {
+  position: relative;
+  padding: 90px;
+  border-radius: 50%;
+  border: 1px solid rgba(44, 44, 44, 0.164);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.329);
+  transition: 0.2s;
+}
+.marcasLista a:hover {
+  box-shadow: 0px 5px 5px black;
+}
+.marcasLista a:hover img {
+  scale: 1.2;
+}
+.marcasLista a img {
+  transition: 0.2s;
+  width: 100px;
+  position: absolute;
+  top: 41px;
+  bottom: 41px;
+  left: 41px;
+  right: 41px;
+}
+
+@media (width < 1000px) {
+  .marcasLista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 120px));
+    justify-content: center;
+  }
+  .marcasLista a {
+    padding: 60px;
+    z-index: 1;
+  }
+  .marcasLista a img {
+    z-index: 0;
+    width: 70px;
+    top: 26px;
+    bottom: 26px;
+    left: 26px;
+    right: 26px;
+  }
+  .marcasLista a:hover img {
+    scale: 1;
+  }
+}
+@media (width < 600px) {
+  .marcasArea h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+}
