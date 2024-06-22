@@ -16,12 +16,12 @@ import './css/style.css';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/ecomerce',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
+        path: '/ecommerce',
         element: <Home />,
       },
       {
