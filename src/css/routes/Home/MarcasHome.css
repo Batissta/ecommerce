@@ -7,13 +7,14 @@
 }
 
 .marcasArea::-webkit-scrollbar-track {
-  background-color: #292929;
+  background: rgb(255, 255, 255);
+  border: 1px solid black;
   border-radius: 10px;
   margin: 0 40px;
 }
 
 .marcasArea::-webkit-scrollbar-thumb {
-  background: rgb(104, 103, 103);
+  background-color: #292929;
   border-radius: 10px;
 }
 
@@ -37,24 +38,26 @@
   padding: 15px 20px;
   gap: 20px;
   position: relative;
+  transition: 0.2s;
+}
+.marcasLista:hover a img {
+  transition: 0.4s ease;
+  filter: blur(15px);
 }
 
 .marcasLista a {
   position: relative;
   padding: 90px;
-  border-radius: 50%;
-  border: 1px solid rgba(44, 44, 44, 0.164);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.329);
   transition: 0.2s;
 }
-.marcasLista a:hover {
-  box-shadow: 0px 5px 5px black;
-}
+
 .marcasLista a:hover img {
-  scale: 1.2;
+  filter: blur(0px);
+  scale: 1.4;
 }
+
 .marcasLista a img {
-  transition: 0.2s;
+  transition: 0.4s;
   width: 100px;
   position: absolute;
   top: 41px;

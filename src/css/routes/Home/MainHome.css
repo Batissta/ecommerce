@@ -5,7 +5,7 @@
 .homeMain {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   justify-content: center;
   gap: 20px;
 }
@@ -59,22 +59,88 @@
 .homeMain-img:hover .collection-year {
   opacity: 1;
 }
-
+.homeMainTitle {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 48px;
+  justify-items: center;
+  margin-bottom: 60px;
+}
 .homeMain-bg h1 {
+  line-height: 50px;
   color: #181818;
   text-align: center;
   font-family: 'Poppins';
   font-weight: 300;
-  margin: 15px 0 0px 0;
+  max-height: fit-content;
+  animation: carrosselTexts 8s ease infinite;
 }
+@keyframes carrosselTexts {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(0px);
+  }
 
+  20% {
+    transform: translateY(-54px);
+  }
+  40% {
+    transform: translateY(-54px);
+  }
+  60% {
+    transform: translateY(-106px);
+  }
+  80% {
+    transform: translateY(-106px);
+  }
+}
 @media (width < 1000px) {
   .homeMain {
     grid-template-columns: repeat(2, 1fr);
   }
+  .homeMain-bg h1 {
+    font-size: 20px;
+  }
 }
 @media (width < 600px) {
   .homeMain-bg h1 {
-    font-size: 22px;
+    font-size: 14px;
+  }
+}
+@media (width < 440px) {
+  .homeMainTitle {
+    height: 30px;
+  }
+  .homeMain-bg h1 {
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  @keyframes carrosselTexts {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    10% {
+      transform: translateY(0px);
+    }
+
+    20% {
+      transform: translateY(-34px);
+    }
+    40% {
+      transform: translateY(-34px);
+    }
+    60% {
+      transform: translateY(-68px);
+    }
+    80% {
+      transform: translateY(-68px);
+    }
   }
 }

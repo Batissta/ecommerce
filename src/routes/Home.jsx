@@ -49,10 +49,22 @@ const Home = () => {
             />
           </div>
         </div>
-        <h1>
-          Venha entender o sentido da palavra{' '}
-          <span className="dotGray">exclusividade</span>.
-        </h1>
+        <div className="homeMainTitle">
+          <h1>
+            <p>
+              Venha entender o sentido da palavra{' '}
+              <span className="dotGray">exclusividade</span>.<br />
+            </p>
+            <p>
+              Mais que moda. Uma <span className="dotGray">experiência</span>.
+              <br />
+            </p>
+            <p>
+              This is <span className="dotGray">Heavy</span>.
+              <br />
+            </p>
+          </h1>
+        </div>
       </main>
 
       <section className="marcas container">
