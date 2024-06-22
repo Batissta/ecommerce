@@ -10,6 +10,20 @@ body {
   margin: 0;
   padding: 4rem 0 0 0;
 }
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin: 0 40px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #292929;
+  border-radius: 10px;
+}
 
 img {
   max-width: 100%;

@@ -2,7 +2,7 @@
 import App from './App.jsx';
 import Home from './routes/Home.jsx';
 import Login from './routes/Login.jsx';
-import Produtos from './routes/Produtos.jsx';
+import Produto from './routes/Produto.jsx';
 import EsqueciSenha from './routes/EsqueciSenha.jsx';
 import CriarConta from './routes/CriarConta.jsx';
 import ErrorPage from './routes/ErrorPage.jsx';
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: 'produtos',
-        element: <Produtos />,
+        path: 'produto/:name',
+        element: <Produto />,
       },
       {
         path: 'forgetPass',
@@ -46,6 +46,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />,
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
