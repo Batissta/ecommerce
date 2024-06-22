@@ -55,49 +55,41 @@ const Home = () => {
         </h1>
       </main>
 
-      <section className="marcasArea">
+      <section className="marcas container">
         <h2>Navegue por marcas.</h2>
-        <div className="marcasLista">
-          <Link to="/">
-            {' '}
-            <img src={logoLeV} alt="" />
-          </Link>
-          <Link to="/">
-            {' '}
-            <img src={logoPrada} alt="" />
-          </Link>
-          <Link to="/">
-            {' '}
-            <img src={logoRolex} alt="" />
-          </Link>
-          <Link to="/">
-            {' '}
-            <img src={logoVersace} alt="" />
-          </Link>
-          <Link to="/">
-            {' '}
-            <img src={logoBalenciaga} alt="" />
-          </Link>
-          <Link to="/">
-            {' '}
-            <img src={logoBotega} alt="" />
-          </Link>
-          <Link to="/">
-            {' '}
-            <img src={logoCartier} alt="" />
-          </Link>
-          <Link to="/">
-            {' '}
-            <img src={logoChanel} alt="" />
-          </Link>
-          <Link to="/">
-            {' '}
-            <img src={logoHuboBoss} alt="" />
-          </Link>
-          <Link to="/">
-            {' '}
-            <img src={logoPrada} alt="" />
-          </Link>
+        <div className="marcasArea">
+          <div className="marcasLista">
+            <Link to="/">
+              <img src={logoLeV} alt="" />
+            </Link>
+            <Link to="/">
+              <img src={logoPrada} alt="" />
+            </Link>
+            <Link to="/">
+              <img src={logoRolex} alt="" />
+            </Link>
+            <Link to="/">
+              <img src={logoVersace} alt="" />
+            </Link>
+            <Link to="/">
+              <img src={logoBalenciaga} alt="" />
+            </Link>
+            <Link to="/">
+              <img src={logoBotega} alt="" />
+            </Link>
+            <Link to="/">
+              <img src={logoCartier} alt="" />
+            </Link>
+            <Link to="/">
+              <img src={logoChanel} alt="" />
+            </Link>
+            <Link to="/">
+              <img src={logoHuboBoss} alt="" />
+            </Link>
+            <Link to="/">
+              <img src={logoPrada} alt="" />
+            </Link>
+          </div>
         </div>
       </section>
     </>

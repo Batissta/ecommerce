@@ -1,10 +1,30 @@
-.marcasArea {
-  max-width: 1200px;
-  padding: 0 40px;
+.marcas {
   margin: 120px auto;
 }
 
-.marcasArea h2 {
+.marcasArea::-webkit-scrollbar {
+  height: 6px;
+}
+
+.marcasArea::-webkit-scrollbar-track {
+  background-color: #292929;
+  border-radius: 10px;
+  margin: 0 40px;
+}
+
+.marcasArea::-webkit-scrollbar-thumb {
+  background: rgb(104, 103, 103);
+  border-radius: 10px;
+}
+
+.marcasArea {
+  max-width: 1200px;
+  padding: 0 40px 20px 40px;
+  margin: 0px auto;
+  overflow: auto;
+}
+
+.marcas h2 {
   font-family: 'Poppins';
   text-transform: lowercase;
   font-weight: 400;
@@ -13,10 +33,10 @@
 }
 
 .marcasLista {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
+  display: flex;
+  padding: 15px 20px;
   gap: 20px;
+  position: relative;
 }
 
 .marcasLista a {
@@ -24,7 +44,7 @@
   padding: 90px;
   border-radius: 50%;
   border: 1px solid rgba(44, 44, 44, 0.164);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.329);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.329);
   transition: 0.2s;
 }
 .marcasLista a:hover {
@@ -44,11 +64,6 @@
 }
 
 @media (width < 1000px) {
-  .marcasLista {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40px, 120px));
-    justify-content: center;
-  }
   .marcasLista a {
     padding: 60px;
     z-index: 1;
@@ -66,7 +81,7 @@
   }
 }
 @media (width < 600px) {
-  .marcasArea h2 {
+  .marcas h2 {
     font-size: 16px;
     text-align: center;
   }
