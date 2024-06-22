@@ -5,17 +5,20 @@
 .mainProduto {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 .imagensArea {
-  height: 600px;
-  overflow: auto;
+  height: 560px;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
 }
 .imagensArea img {
-  height: 600px;
+  height: 560px;
   width: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
+  scroll-snap-align: start;
 }
 
 .imagensArea::-webkit-scrollbar {
@@ -37,7 +40,6 @@
   padding: 0 40px;
   display: flex;
   flex-direction: column;
-  /* grid-template-columns: 1fr 1fr; */
 }
 
 .produtoContent .title {
@@ -51,7 +53,7 @@
 }
 .produtoContent .title img {
   position: relative;
-  bottom: -5px;
+  bottom: 1px;
   height: 20px;
   width: 20px;
 }
@@ -61,4 +63,70 @@
   font-weight: 300;
   padding: 4px 0 0 4px;
   display: block;
+}
+
+.produtoBotao {
+  cursor: pointer;
+  font-family: 'Poppins';
+  color: #202020;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px #202020;
+  padding: 7px 9px;
+  margin-top: 32px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.produtoBotao:hover {
+  color: white;
+}
+
+.produtoBotao::before {
+  content: '';
+  display: block;
+  background-color: #202020;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0%;
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+.produtoBotao:hover::before {
+  height: 100%;
+  width: 100%;
+}
+.complementos {
+  margin: 16px 0;
+}
+
+.complementos p {
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1a1a1aad;
+  padding: 0 4px;
+}
+
+.sobreFrete {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: default;
+}
+.sobreFrete img {
+  height: 24px;
+  width: 24px;
+  transition: 0.4s;
+}
+
+.sobreFrete:hover > img {
+  scale: 1.2;
 }
