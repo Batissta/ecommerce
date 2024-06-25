@@ -1,5 +1,8 @@
 .mainProduto-bg {
-  margin-top: 40px;
+  margin-top: 0;
+  max-width: initial;
+  height: calc(100vh - 64px);
+  padding: 0;
 }
 
 .mainProduto {
@@ -9,12 +12,12 @@
 }
 
 .imagensArea {
-  height: 560px;
+  height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y proximity;
 }
 .imagensArea img {
-  height: 560px;
+  height: 100vh;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -37,7 +40,7 @@
 }
 
 .produtoContent {
-  margin-top: 40px;
+  margin-top: 20vh;
   padding: 0 40px;
   display: flex;
   flex-direction: column;
@@ -64,7 +67,7 @@
 }
 
 .produtoContent .preco {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 300;
   padding: 4px 0 0 4px;
   display: block;
@@ -72,7 +75,7 @@
 
 .produtoBotao {
   cursor: pointer;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   color: #202020;
   background-color: #ffffff;
   box-shadow: 0px 0px 5px #202020;
@@ -90,7 +93,7 @@
 }
 
 .produtoBotao::before {
-  content: '';
+  content: "";
   display: block;
   background-color: #202020;
   height: 100%;
@@ -112,7 +115,7 @@
 }
 
 .complementos p {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
