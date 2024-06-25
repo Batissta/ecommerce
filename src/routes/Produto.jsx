@@ -4,8 +4,10 @@ import favIcon from '../assets/fav.png';
 import favoritadoIcon from '../assets/favoritado.png';
 import frete from '../assets/delivery-truck.png';
 
-const Produtos = () => {
+const Produto = () => {
   const { name } = useParams();
+  const [favoritado, setFavoritado] = React.useState(false);
+  const [noCarrinho, setNoCarrinho] = React.useState(false);
   const [srcFav, setSrcFav] = React.useState(favIcon);
   const navigate = useNavigate();
 
@@ -45,6 +47,7 @@ const Produtos = () => {
                         return (src = favIcon);
                       }
                     });
+                    setFavoritado((s) => !s);
                   }}
                 >
                   <img src={srcFav} alt="" />
@@ -52,7 +55,18 @@ const Produtos = () => {
               </h1>
               <span className="preco">R$ 10,500.00</span>
             </div>
-            <button className="produtoBotao">ADICIONAR AO CARRINHO</button>
+            <p>
+              <span>Brand:</span> Marca do produto
+            </p>
+            <button
+              className="produtoBotao"
+              onClick={() => {
+                setNoCarrinho((s) => !s);
+              }}
+            >
+              {!noCarrinho && 'ADICIONAR AO CARRINHO'}
+              {noCarrinho && 'REMOVER DO CARRINHO'}
+            </button>
             <div className="complementos">
               <p>
                 Parcelamento em até 10x sem juros com o cartão Heavy black nas
@@ -70,4 +84,4 @@ const Produtos = () => {
   );
 };
 
-export default Produtos;
+export default Produto;

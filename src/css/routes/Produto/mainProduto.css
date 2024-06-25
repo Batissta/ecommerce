@@ -5,7 +5,7 @@
 .mainProduto {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .imagensArea {
@@ -37,9 +37,14 @@
 }
 
 .produtoContent {
+  margin-top: 40px;
   padding: 0 40px;
   display: flex;
   flex-direction: column;
+}
+
+.titleArea {
+  margin-bottom: 12px;
 }
 
 .produtoContent .title {

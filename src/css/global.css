@@ -87,7 +87,6 @@ button {
   color: #879132;
   font-weight: 400;
 }
-
 @media (width < 600px) {
   .container {
     padding: 0 20px;

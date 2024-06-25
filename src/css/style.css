@@ -8,3 +8,6 @@
 @import './Header.css';
 @import './routes/Home/home.css';
 @import './routes/Produto/produto.css';
+
+/* components */
+@import './Loading.css';

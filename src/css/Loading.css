@@ -1,0 +1,28 @@
+.loading-box {
+  margin: 80px auto;
+  height: 48px;
+  width: 48px;
+  border: 3px solid #3a3a3a;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+}
+
+.lds-ring {
+  background-color: #ffffff;
+  height: 140%;
+  width: 30%;
+  top: -20%;
+  position: relative;
+  margin: 0 auto;
+  animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

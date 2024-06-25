@@ -34,6 +34,7 @@ const Home = () => {
     },
     // Adicione mais coleções conforme necessário
   ];
+
   return (
     <>
       <main className="homeMain-bg container">
@@ -107,6 +108,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="homeProdutos"></section>
     </>
   );
 };
