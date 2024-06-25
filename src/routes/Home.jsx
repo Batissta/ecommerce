@@ -9,6 +9,7 @@ import logoCartier from '../assets/logos/cartier_logo.png';
 import logoChanel from '../assets/logos/chanel_logo.png';
 import logoHuboBoss from '../assets/logos/hugoboss_logo.png';
 import { Link } from 'react-router-dom';
+import Produtos from '../components/Produtos';
 
 const Home = () => {
   const collections = [
@@ -34,7 +35,11 @@ const Home = () => {
     },
     // Adicione mais coleções conforme necessário
   ];
-
+  const getProdutos = async () => {
+    const response = await fetch("https://batissta.github.io/ecommerce-backend/produtos.json")
+    const json = await response.json();
+    return json;
+  }
   return (
     <>
       <main className="homeMain-bg container">
@@ -109,7 +114,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="homeProdutos"></section>
+      <section className="homeProdutos">
+          <Produtos data={data}/>
+      </section>
     </>
   );
 };

@@ -1,34 +1,34 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import '../css/routes/Login.css';
-import Loading from '../components/Loading';
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = React.useState('');
+  const [email, setEmail] = React.useState("");
+  const [senha, setSenha] = React.useState("");
   const [autorizado, setAutorizado] = React.useState(false);
   const [tentativas, setTentativas] = React.useState(0);
-  const [senha, setSenha] = React.useState('');
   const [loading, setLoading] = React.useState(false);
   const getUsers = async () => {
     setLoading(true);
     setTentativas((n) => n + 1);
     const response = await fetch(
-      'https://batissta.github.io/ecommerce-backend/usuarios.json',
+      "https://batissta.github.io/ecommerce-backend/usuarios.json"
     );
     const data = await response.json();
     const exists = data.some((e) => {
       return e.email === email && e.password === senha;
     });
     if (exists) {
-      navigate('/');
+      setAutorizado(true);
+      navigate("/");
     }
     setLoading(false);
   };
 
   return (
     <>
-      <div id="login" className="container-box">
+      <section id="login" className="container-box login">
         <form id="login-form" method="post">
           <h1>LOGIN</h1>
           {!loading && (
@@ -63,12 +63,12 @@ const Login = () => {
           )}
 
           {!autorizado && tentativas > 0 && !loading && (
-            <p style={{ color: 'red', paddingTop: '4px' }}>
+            <p style={{ color: "red", paddingTop: "4px" }}>
               Endereço de email ou senha estão incorretos.
             </p>
           )}
           {!loading && (
-            <div className="links-cad">
+            <div className="links-cad links-login">
               <Link className="link" to="/forgetPass">
                 Esqueceu sua senha?
               </Link>
@@ -79,7 +79,7 @@ const Login = () => {
           )}
         </form>
         {loading && <Loading />}
-      </div>
+      </section>
     </>
   );
 };

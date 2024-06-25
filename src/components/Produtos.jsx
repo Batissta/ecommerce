@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const Produtos = () => {
-  // 1- pegar os dados da api no github. url -> https://batissta.github.io/ecommerce-backend/produtos.json
+const Produtos = ({ data }) => {
+  const dados = data;
 
   // 2- fazer um map e para cada produto, criar um card, onde seus detalhes aparecem após passar o mouse em cima.
 
