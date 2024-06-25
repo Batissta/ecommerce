@@ -40,17 +40,18 @@
 }
 
 .produtoContent {
-  margin-top: 20vh;
-  padding: 0 40px;
+  margin-top: 5vh;
+  padding: 80px;
   display: flex;
   flex-direction: column;
 }
 
 .titleArea {
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 .produtoContent .title {
+  font-family: Montserrat;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,30 +73,35 @@
   padding: 4px 0 0 4px;
   display: block;
 }
-
+.produtoContent p {
+  font-family: montserrat;
+}
 .produtoBotao {
-  cursor: pointer;
-  font-family: "Poppins";
-  color: #202020;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 5px #202020;
-  padding: 7px 9px;
   margin-top: 32px;
-  border-radius: 12px;
+  padding: 15px 65px;
+  border: unset;
+  border-radius: 15px;
+  color: #e8e8e8;
+  z-index: 1;
+  background-color: #202020;
   position: relative;
-  z-index: 2;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
   overflow: hidden;
-  transition: 0.3s;
+  cursor: pointer;
 }
 
 .produtoBotao:hover {
-  color: white;
+  color: black;
 }
 
 .produtoBotao::before {
   content: "";
   display: block;
-  background-color: #202020;
+  background: #e8e8e8;
   height: 100%;
   position: absolute;
   top: 0;
@@ -111,7 +117,7 @@
   width: 100%;
 }
 .complementos {
-  margin: 16px 0;
+  margin: 30px 0;
 }
 
 .complementos p {
@@ -137,4 +143,14 @@
 
 .sobreFrete:hover > img {
   scale: 1.2;
+}
+.posCompra {
+  width: 50%;
+  margin-top: 10px;
+}
+.posCompra p {
+  margin: 30px auto;
+  font-size: 15px;
+  font-style: italic;
+  cursor: pointer;
 }

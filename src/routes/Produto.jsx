@@ -64,7 +64,7 @@ const Produto = () => {
                 setNoCarrinho((s) => !s);
               }}
             >
-              {!noCarrinho && 'ADICIONAR AO CARRINHO'}
+              {!noCarrinho && 'Adicionar ao carrinho'}
               {noCarrinho && 'REMOVER DO CARRINHO'}
             </button>
             <div className="complementos">
@@ -76,6 +76,10 @@ const Produto = () => {
                 <img src={frete} alt="" />
                 Frete Grátis em todo o território nacional.
               </p>
+            </div>
+            <div className='posCompra'>
+              <p>Detalhes do produto</p>
+              <p>Frete e devolução grátis</p>
             </div>
           </div>
         </section>
