@@ -1,45 +1,47 @@
-import React from 'react';
-import logoLeV from '../assets/logos/logo_l&v.png';
-import logoPrada from '../assets/logos/logo_prada.png';
-import logoRolex from '../assets/logos/logo_rolex.png';
-import logoVersace from '../assets/logos/logo_versace.png';
-import logoBalenciaga from '../assets/logos/balenciaga_logo.png';
-import logoBotega from '../assets/logos/botega_veneta_logo.png';
-import logoCartier from '../assets/logos/cartier_logo.png';
-import logoChanel from '../assets/logos/chanel_logo.png';
-import logoHuboBoss from '../assets/logos/hugoboss_logo.png';
-import { Link } from 'react-router-dom';
-import Produtos from '../components/Produtos';
+import React from "react";
+import logoLeV from "../assets/logos/logo_l&v.png";
+import logoPrada from "../assets/logos/logo_prada.png";
+import logoRolex from "../assets/logos/logo_rolex.png";
+import logoVersace from "../assets/logos/logo_versace.png";
+import logoBalenciaga from "../assets/logos/balenciaga_logo.png";
+import logoBotega from "../assets/logos/botega_veneta_logo.png";
+import logoCartier from "../assets/logos/cartier_logo.png";
+import logoChanel from "../assets/logos/chanel_logo.png";
+import logoHuboBoss from "../assets/logos/hugoboss_logo.png";
+import { Link } from "react-router-dom";
+import Produtos from "../components/Produtos";
 
 const Home = () => {
   const collections = [
     {
-      name: 'SUMMER COLLECTION',
+      name: "SUMMER COLLECTION",
       year: 2024,
-      src: 'https://saint-laurent.dam.kering.com/m/85737dbadf46d36/original/freetemplate_hailey_bieber.jpg',
+      src: "https://saint-laurent.dam.kering.com/m/85737dbadf46d36/original/freetemplate_hailey_bieber.jpg",
     },
     {
-      name: 'FALL COLLECTION',
+      name: "FALL COLLECTION",
       year: 2024,
-      src: 'https://saint-laurent.dam.kering.com/m/4316411df4b63805/original/freetemplate_hailey_bieber.jpg',
+      src: "https://saint-laurent.dam.kering.com/m/4316411df4b63805/original/freetemplate_hailey_bieber.jpg",
     },
     {
-      name: 'SPRING COLLECTION',
+      name: "SPRING COLLECTION",
       year: 2024,
-      src: 'https://saint-laurent.dam.kering.com/m/4316411df4b63805/original/freetemplate_hailey_bieber.jpg',
+      src: "https://saint-laurent.dam.kering.com/m/4316411df4b63805/original/freetemplate_hailey_bieber.jpg",
     },
     {
-      name: 'WINTER COLLECTION',
+      name: "WINTER COLLECTION",
       year: 2024,
-      src: 'https://saint-laurent.dam.kering.com/m/85737dbadf46d36/original/freetemplate_hailey_bieber.jpg',
+      src: "https://saint-laurent.dam.kering.com/m/85737dbadf46d36/original/freetemplate_hailey_bieber.jpg",
     },
     // Adicione mais coleções conforme necessário
   ];
   const getProdutos = async () => {
-    const response = await fetch("https://batissta.github.io/ecommerce-backend/produtos.json")
+    const response = await fetch(
+      "https://batissta.github.io/ecommerce-backend/produtos.json"
+    );
     const json = await response.json();
     return json;
-  }
+  };
   return (
     <>
       <main className="homeMain-bg container">
@@ -61,7 +63,7 @@ const Home = () => {
         <div className="homeMainTitle">
           <h1>
             <p>
-              Venha entender o sentido da palavra{' '}
+              Venha entender o sentido da palavra{" "}
               <span className="dotGray">exclusividade</span>.<br />
             </p>
             <p>
@@ -115,7 +117,7 @@ const Home = () => {
       </section>
 
       <section className="homeProdutos">
-          <Produtos data={data}/>
+        <Produtos data={getProdutos} />
       </section>
     </>
   );
