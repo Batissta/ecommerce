@@ -13,11 +13,11 @@ const Login = () => {
     setLoading(true);
     setTentativas((n) => n + 1);
     const response = await fetch(
-      "https://batissta.github.io/ecommerce-backend/usuarios.json"
+      "http://localhost:3003/sistema/clientes"
     );
     const data = await response.json();
     const exists = data.some((e) => {
-      return e.email === email && e.password === senha;
+      return e.email === email && e.senha === senha;
     });
     if (exists) {
       setAutorizado(true);
