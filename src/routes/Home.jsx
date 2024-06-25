@@ -9,7 +9,7 @@ import logoCartier from "../assets/logos/cartier_logo.png";
 import logoChanel from "../assets/logos/chanel_logo.png";
 import logoHuboBoss from "../assets/logos/hugoboss_logo.png";
 import { Link } from "react-router-dom";
-import Produtos from "../components/Produtos";
+import ProdutoComponent from "../components/ProdutoComponent";
 
 const Home = () => {
   const collections = [
@@ -35,13 +35,21 @@ const Home = () => {
     },
     // Adicione mais coleções conforme necessário
   ];
-  const getProdutos = async () => {
+  const [produtos, setProdutos] = React.useState([]);
+  const loadProdutos = async () => {
     const response = await fetch(
-      "https://batissta.github.io/ecommerce-backend/produtos.json"
+      "https://batissta.github.io/ecommerce-backend/produtos.json",
+      {
+        method: "GET",
+      }
     );
     const json = await response.json();
-    return json;
+    setProdutos(json);
   };
+
+  React.useEffect(() => {
+    loadProdutos();
+  }, []);
   return (
     <>
       <main className="homeMain-bg container">
@@ -117,7 +125,18 @@ const Home = () => {
       </section>
 
       <section className="homeProdutos">
-        <Produtos data={getProdutos} />
+        {produtos.map((p) => {
+          return (
+            <ProdutoComponent
+              key={p.nome}
+              produto={p}
+              // nome={p.nome}
+              // preco={p.preco}
+              // descricao={p.descricao}
+              // src={p.imagemSrc}
+            />
+          );
+        })}
       </section>
     </>
   );
