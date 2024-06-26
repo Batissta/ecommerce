@@ -72,7 +72,7 @@ const Produto = () => {
                 setNoCarrinho((s) => !s);
               }}
             >
-              {!noCarrinho && 'ADICIONAR AO CARRINHO'}
+              {!noCarrinho && 'Adicionar ao carrinho'}
               {noCarrinho && 'REMOVER DO CARRINHO'}
             </button>
             <div className="complementos">
