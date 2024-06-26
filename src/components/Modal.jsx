@@ -33,9 +33,7 @@ const Modal = ({ mobile }) => {
             <li>
               <Link
                 className="link"
-                onClick={() => {
-                  alert("seção em desenvolvimento.");
-                }}
+                to="/desenvolvimento"
                 style={{ display: "block" }}
               >
                 Carrinho

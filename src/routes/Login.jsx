@@ -12,20 +12,19 @@ const Login = () => {
   const getUsers = async () => {
     setLoading(true);
     setTentativas((n) => n + 1);
-    try {
+
       const response = await fetch("http://localhost:3003/sistema/clientes");
       const data = await response.json();
+      console.log(data);
       const exists = data.some((e) => {
         return e.email === email.toLowerCase().trim() && e.senha === senha;
       });
-    } catch (e) {
-      alert("Não foi possível acessar a api.");
-      setLoading(false);
-    }
-    if (exists) {
-      setAutorizado(true);
-      navigate("/");
-    }
+      if (exists) {
+        setAutorizado(true);
+        navigate("/");
+      }else {
+        setLoading(false);
+      }
   };
 
   return (

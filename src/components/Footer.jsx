@@ -10,10 +10,10 @@ const Footer = () => {
       </div>
       <div className="navegacaoFooter">
         <Link to="/">Página inicial</Link>
-        <Link onClick={() => alert("Seção em desenvolvimento!")}>
+        <Link to="/desenvolvimento">
           Quem somos?
         </Link>
-        <Link onClick={() => alert("Seção em desenvolvimento!")}>Carrinho</Link>
+        <Link to="/desenvolvimento">Carrinho</Link>
       </div>
     </footer>
   );
