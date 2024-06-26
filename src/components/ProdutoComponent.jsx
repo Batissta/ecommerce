@@ -1,14 +1,18 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProdutoComponent = ({ produto }) => {
-  // done - fazer um map e para cada produto, criar um card, onde seus detalhes aparecem após passar o mouse em cima.
-
-  // 3- criar um botão para adicionar o produto ao carrinho.
   return (
-    <div>
-      <h1>{produto.nome}</h1>
-      <img src={produto.imagemSrc} alt="" />
-    </div>
+    <Link to={`/produto/${produto.nome}`} className="produtoComponent">
+      <div className="produtoComponentImg">
+        <img src={produto.img1} alt="" />
+      </div>
+      <div className="produtoComponentInfo">
+        <h2>{produto.nome}</h2>
+        <span>$ {produto.preco}</span>
+        <p>{produto.descricao}</p>
+      </div>
+    </Link>
   );
 };
 

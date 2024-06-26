@@ -5,38 +5,44 @@ import favoritadoIcon from '../assets/favoritado.png';
 import frete from '../assets/delivery-truck.png';
 
 const Produto = () => {
-  const { name } = useParams();
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [favoritado, setFavoritado] = React.useState(false);
   const [noCarrinho, setNoCarrinho] = React.useState(false);
   const [srcFav, setSrcFav] = React.useState(favIcon);
-  const navigate = useNavigate();
+  const [produtoById, setProdutoById] = React.useState({});
 
+  const findProduto = async () => {
+    const response = await fetch(
+      'https://batissta.github.io/ecommerce-backend/produtos.json',
+      {
+        method: 'GET',
+      },
+    );
+    const json = await response.json();
+    if (!json.some((p) => p.id == id)) {
+      navigate('/404');
+    }
+    const produtoId = json.find((p) => +id === p.id);
+    setProdutoById(produtoId);
+  };
+
+  React.useEffect(() => {
+    findProduto();
+  }, []);
   return (
     <>
       <main className="mainProduto-bg container">
         <section className="mainProduto">
           <div className="imagensArea">
-            <img
-              src="https://saint-laurent.dam.kering.com/m/85737dbadf46d36/original/freetemplate_hailey_bieber.jpg"
-              alt=""
-            />
-            <img
-              src="https://saint-laurent.dam.kering.com/m/4316411df4b63805/original/freetemplate_hailey_bieber.jpg"
-              alt=""
-            />
-            <img
-              src="https://saint-laurent.dam.kering.com/m/85737dbadf46d36/original/freetemplate_hailey_bieber.jpg"
-              alt=""
-            />
-            <img
-              src="https://saint-laurent.dam.kering.com/m/4316411df4b63805/original/freetemplate_hailey_bieber.jpg"
-              alt=""
-            />
+            <img src={produtoById.img1} alt="" />
+            <img src={produtoById.img2} alt="" />
+            <img src={produtoById.img3} alt="" />
           </div>
           <div className="produtoContent">
             <div className="titleArea">
               <h1 className="title">
-                {name}
+                {produtoById.nome}
                 <button
                   className="favBtn"
                   onClick={() => {
@@ -53,11 +59,13 @@ const Produto = () => {
                   <img src={srcFav} alt="" />
                 </button>
               </h1>
-              <span className="preco">R$ 10,500.00</span>
+              <span className="preco">$ {produtoById.preco}</span>
             </div>
-            <p>
-              <span>Brand:</span> Marca do produto
-            </p>
+            <div className="infosProduto">
+              <p className="produtoDescricao">{produtoById.descricao}</p>
+              <p>{produtoById.brand}</p>
+            </div>
+
             <button
               className="produtoBotao"
               onClick={() => {

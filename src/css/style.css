@@ -1,14 +1,15 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-
-/* CSS */
-@import "./global.css";
-@import "./Header.css";
-@import "./routes/Home/home.css";
-@import "./routes/Produto/produto.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* components */
-@import "./Loading.css";
-@import "./routes/Login.css";
+@import './global.css';
+@import './Header.css';
+@import './Loading.css';
+@import './ProdutoComponent.css';
+
+/*  ROUTES */
+@import './routes/Home/home.css';
+@import './routes/Login.css';
+@import './routes/Produto/produto.css';

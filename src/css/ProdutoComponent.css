@@ -1,0 +1,51 @@
+.produtoComponentImg {
+  height: 400px;
+  width: 304px;
+  overflow: hidden;
+}
+.produtoComponentImg img {
+  max-width: initial;
+  height: 400px;
+  width: 304px;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.produtoComponentImg img:hover {
+  scale: 1.1;
+}
+
+.produtoComponentInfo {
+  display: grid;
+  margin-top: 12px;
+  padding: 0 6px;
+}
+.produtoComponentInfo h2 {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #121212;
+}
+.produtoComponentInfo span {
+  margin-bottom: 12px;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #00000081;
+}
+.produtoComponentInfo p {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 0.825rem;
+  color: #00000080;
+}
+.lerMais {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #00000091;
+  text-decoration: underline;
+}

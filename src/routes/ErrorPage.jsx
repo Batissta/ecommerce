@@ -1,11 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
+  const error = useRouteError();
   return (
     <>
-      <span style={{ display: 'block' }}>Essa rota não existe neste site.</span>
-      <Link to="/">Página Inicial</Link>
+      <h1>Ops...</h1>
+      <p>Perdão, um erro inesperado aconteceu</p>
+      <p>{error.statusText || error.message}</p>
     </>
   );
 };

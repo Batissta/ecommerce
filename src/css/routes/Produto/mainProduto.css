@@ -8,6 +8,8 @@
 .mainProduto {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 0 60px;
+  gap: 60px;
   /* align-items: center; */
 }
 
@@ -40,8 +42,8 @@
 }
 
 .produtoContent {
-  margin-top: 20vh;
-  padding: 0 40px;
+  margin-top: 15vh;
+  padding: 0 20px 0 20px;
   display: flex;
   flex-direction: column;
 }
@@ -51,6 +53,9 @@
 }
 
 .produtoContent .title {
+  font-size: 1.125rem;
+  font-family: 'Montserrat';
+  font-weight: 800;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,19 +72,39 @@
 }
 
 .produtoContent .preco {
-  font-family: "Montserrat";
-  font-weight: 300;
+  font-family: 'Montserrat';
+  font-weight: 800;
   padding: 4px 0 0 4px;
   display: block;
+  color: #8b8b8b;
+}
+.infosProduto {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+.produtoDescricao {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 15px;
+  max-width: 45ch;
+  margin-bottom: 12px;
+  color: #20202091;
+  cursor: pointer;
+}
+.produtoDescricao:hover {
+  color: #20202091;
 }
 
 .produtoBotao {
   cursor: pointer;
-  font-family: "Poppins";
+  font-family: 'Poppins';
+  font-size: 1.1rem;
+  font-weight: 800;
   color: #202020;
   background-color: #ffffff;
   box-shadow: 0px 0px 5px #202020;
-  padding: 7px 9px;
+  padding: 9px 18px;
   margin-top: 32px;
   border-radius: 12px;
   position: relative;
@@ -93,7 +118,7 @@
 }
 
 .produtoBotao::before {
-  content: "";
+  content: '';
   display: block;
   background-color: #202020;
   height: 100%;
@@ -115,7 +140,7 @@
 }
 
 .complementos p {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
