@@ -1,6 +1,31 @@
+.produtosHome-bg {
+  padding: 60px 0;
+  margin-top: 120px;
+}
+.title-1 {
+  font-family: 'Poppins';
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
 .produtosHome {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
   align-items: start;
-  margin-bottom: 600px;
+  margin-bottom: 120px;
+}
+
+@media (width < 800px) {
+  .carrosselProducts {
+    overflow: auto;
+  }
+  .produtosHome {
+    width: 1200px;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+  }
 }

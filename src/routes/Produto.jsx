@@ -73,7 +73,7 @@ const Produto = () => {
               }}
             >
               {!noCarrinho && 'Adicionar ao carrinho'}
-              {noCarrinho && 'REMOVER DO CARRINHO'}
+              {noCarrinho && 'Remover do carrinho'}
             </button>
             <div className="complementos">
               <p>

@@ -25,7 +25,7 @@
   overflow: auto;
 }
 
-.marcas h2 {
+.title-1 {
   font-family: 'Poppins';
   text-transform: lowercase;
   font-weight: 400;
@@ -84,7 +84,7 @@
   }
 }
 @media (width < 600px) {
-  .marcas h2 {
+  .title-1 {
     font-size: 16px;
     text-align: center;
   }

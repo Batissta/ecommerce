@@ -1,12 +1,17 @@
+.produtoComponent {
+  width: 304px;
+}
 .produtoComponentImg {
   height: 400px;
-  width: 304px;
+  width: auto;
+  display: flex;
   overflow: hidden;
+  padding: 40px 0;
 }
 .produtoComponentImg img {
-  max-width: initial;
-  height: 400px;
-  width: 304px;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
   object-fit: cover;
   object-position: center;
   transition: 0.4s;
@@ -19,8 +24,9 @@
 
 .produtoComponentInfo {
   display: grid;
-  margin-top: 12px;
   padding: 0 6px;
+  margin: 12px auto 0px auto;
+  width: 80%;
 }
 .produtoComponentInfo h2 {
   font-family: 'Poppins';
@@ -36,10 +42,11 @@
   color: #00000081;
 }
 .produtoComponentInfo p {
+  max-width: 100%;
   font-family: 'Poppins';
   font-weight: 600;
   font-size: 0.825rem;
-  color: #00000080;
+  color: #131313b0;
 }
 .lerMais {
   margin: 0;
@@ -48,4 +55,11 @@
   background-color: transparent;
   color: #00000091;
   text-decoration: underline;
+}
+
+@media (width < 800px) {
+  .produtoComponentImg {
+    height: 320px;
+    padding: 12px 0;
+  }
 }

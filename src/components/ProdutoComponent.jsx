@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ProdutoComponent = ({ produto }) => {
   return (
-    <Link to={`/produto/${produto.nome}`} className="produtoComponent">
+    <Link to={`/produto/${produto.id}`} className="produtoComponent">
       <div className="produtoComponentImg">
         <img src={produto.img1} alt="" />
       </div>

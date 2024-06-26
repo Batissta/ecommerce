@@ -56,11 +56,7 @@ const Home = () => {
         <div className="homeMain">
           {collections.map((c) => {
             return (
-              <Link
-                to={`/produto/${c.name}`}
-                className="homeMain-img"
-                key={c.name}
-              >
+              <Link to={`/produto/1`} className="homeMain-img" key={c.name}>
                 <h2 className="collection-title">{c.name}</h2>
                 <span className="collection-year">{c.year}</span>
                 <img src={c.src} alt="" />
@@ -87,7 +83,9 @@ const Home = () => {
       </main>
 
       <section className="marcas container">
-        <h2>Navegue por marcas.</h2>
+        <h1 className="title-1">
+          Navegue por marcas<span className="dotGray">.</span>
+        </h1>
         <div className="marcasArea">
           <div className="marcasLista">
             <Link to="/">
@@ -124,10 +122,17 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="produtosHome container">
-        {produtos.map((p) => {
-          return <ProdutoComponent key={p.nome} produto={p} />;
-        })}
+      <section className="produtosHome-bg">
+        <h1 className="title-1">
+          SPRING COLLECTION<span className="dotGray">.</span>
+        </h1>
+        <div className="carrosselProducts">
+          <div className="produtosHome container">
+            {produtos.map((p) => {
+              return <ProdutoComponent key={p.nome} produto={p} />;
+            })}
+          </div>
+        </div>
       </section>
     </>
   );
