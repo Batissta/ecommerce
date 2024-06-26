@@ -59,7 +59,7 @@ const Home = () => {
               <Link to={`/produto/1`} className="homeMain-img" key={c.name}>
                 <h2 className="collection-title">{c.name}</h2>
                 <span className="collection-year">{c.year}</span>
-                <img src={c.src} alt="" />
+                <img src={c.src} alt={c.name} />
               </Link>
             );
           })}

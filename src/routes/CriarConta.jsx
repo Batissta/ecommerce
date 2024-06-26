@@ -5,9 +5,6 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const CriarConta = () => {
   const navigate = useNavigate();
-  const handleRedirect = () => {
-    return navigate("/login");
-  };
   return (
     <>
       <div id="criarConta" class="container-box">
@@ -36,7 +33,11 @@ const CriarConta = () => {
               placeholder="Crie uma senha"
             />
           </div>
-          <button className="button" type="submit" onClick={handleRedirect}>
+          <button
+            className="button"
+            type="submit"
+            onClick={() => navigate("/login")}
+          >
             Enviar
           </button>
           <div class="links-cad">

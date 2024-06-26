@@ -1,8 +1,8 @@
-import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import favIcon from '../assets/fav.png';
-import favoritadoIcon from '../assets/favoritado.png';
-import frete from '../assets/delivery-truck.png';
+import React from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import favIcon from "../assets/fav.png";
+import favoritadoIcon from "../assets/favoritado.png";
+import frete from "../assets/delivery-truck.png";
 
 const Produto = () => {
   const { id } = useParams();
@@ -14,14 +14,14 @@ const Produto = () => {
 
   const findProduto = async () => {
     const response = await fetch(
-      'https://batissta.github.io/ecommerce-backend/produtos.json',
+      "https://batissta.github.io/ecommerce-backend/produtos.json",
       {
-        method: 'GET',
-      },
+        method: "GET",
+      }
     );
     const json = await response.json();
     if (!json.some((p) => p.id == id)) {
-      navigate('/404');
+      navigate("/404");
     }
     const produtoId = json.find((p) => +id === p.id);
     setProdutoById(produtoId);
@@ -35,9 +35,9 @@ const Produto = () => {
       <main className="mainProduto-bg container">
         <section className="mainProduto">
           <div className="imagensArea">
-            <img src={produtoById.img1} alt="" />
-            <img src={produtoById.img2} alt="" />
-            <img src={produtoById.img3} alt="" />
+            <img src={produtoById.img1} alt={produtoById.nome + " imagem 1"} />
+            <img src={produtoById.img2} alt={produtoById.nome + " imagem 2"} />
+            <img src={produtoById.img3} alt={produtoById.nome + " imagem 3"} />
           </div>
           <div className="produtoContent">
             <div className="titleArea">
@@ -72,8 +72,8 @@ const Produto = () => {
                 setNoCarrinho((s) => !s);
               }}
             >
-              {!noCarrinho && 'Adicionar ao carrinho'}
-              {noCarrinho && 'Remover do carrinho'}
+              {!noCarrinho && "Adicionar ao carrinho"}
+              {noCarrinho && "Remover do carrinho"}
             </button>
             <div className="complementos">
               <p>

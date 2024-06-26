@@ -1,27 +1,31 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import Loading from '../components/Loading';
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = React.useState('');
-  const [senha, setSenha] = React.useState('');
+  const [email, setEmail] = React.useState("");
+  const [senha, setSenha] = React.useState("");
   const [autorizado, setAutorizado] = React.useState(false);
   const [tentativas, setTentativas] = React.useState(0);
   const [loading, setLoading] = React.useState(false);
   const getUsers = async () => {
     setLoading(true);
     setTentativas((n) => n + 1);
-    const response = await fetch('http://localhost:3003/sistema/clientes');
-    const data = await response.json();
-    const exists = data.some((e) => {
-      return e.email === email.toLowerCase().trim() && e.senha === senha;
-    });
+    try {
+      const response = await fetch("http://localhost:3003/sistema/clientes");
+      const data = await response.json();
+      const exists = data.some((e) => {
+        return e.email === email.toLowerCase().trim() && e.senha === senha;
+      });
+    } catch (e) {
+      alert("Não foi possível acessar a api.");
+      setLoading(false);
+    }
     if (exists) {
       setAutorizado(true);
-      navigate('/');
+      navigate("/");
     }
-    setLoading(false);
   };
 
   return (
@@ -61,7 +65,7 @@ const Login = () => {
           )}
 
           {!autorizado && tentativas > 0 && !loading && (
-            <p style={{ color: 'red', paddingTop: '4px' }}>
+            <p style={{ color: "red", paddingTop: "4px" }}>
               Endereço de email ou senha estão incorretos.
             </p>
           )}
