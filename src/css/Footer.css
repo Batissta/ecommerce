@@ -1,11 +1,37 @@
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  box-shadow: 0 -1px 1px #e2e2e2;
+  padding: 30px 20px;
 }
 .footerLogo img {
-  width: 30%;
+  max-width: 240px;
+  margin: 0 auto;
+  margin-bottom: 24px;
 }
 
-.footer .navBar .link {
-  color: rgb(46, 46, 46);
+.navegacaoFooter {
+  font-size: 1.1rem;
+  display: flex;
+  justify-self: center;
+  gap: 24px;
+}
+
+.navegacaoFooter a {
+  font-family: "Montserrat";
+  color: #202020;
+  min-width: 120px;
+}
+.navegacaoFooter a:hover {
+  scale: 1.05;
+}
+
+@media (width <600px) {
+  .navegacaoFooter {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .navegacaoFooter a {
+    text-align: center;
+  }
 }

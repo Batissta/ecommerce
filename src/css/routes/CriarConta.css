@@ -1,54 +1,94 @@
 #criarConta .container-box {
-    display: flex;
+  display: flex;
+  margin: 0 auto 120px auto;
+}
+
+#criarConta h1 {
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#criarConta label {
+  font-family: Montserrat;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#criarConta p {
+  font-family: Montserrat;
+  margin: 16px 0;
+}
+#criarConta .inputs-box {
+  display: flex;
+  flex-direction: column;
+}
+
+#criarConta .inputs-box input[type="text"],
+[type="password"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: Montserrat;
+  margin-bottom: 20px;
+}
+#criarConta .button {
+  width: 100%;
+  font-family: "Montserrat";
+  font-weight: 400;
+  background-color: black;
+  color: #fff;
+  padding: 12px 16px;
+  transition: 150ms;
+  font-size: 1.1em;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#criarConta .button:hover {
+  background-color: #f3f3f3;
+  color: #000;
+  cursor: pointer;
+}
+
+@media (width < 600px) {
+  #criarConta.container-box {
+    max-width: 320px;
+    display: grid;
+    padding: 40px 20px;
   }
-  
-  #criarConta h1 {
-    margin-bottom: 24px;
-    text-align: center;
-    font-size: 2rem;
-  }
-  
-  #criarConta label {
-    font-family: Montserrat;
-    display: flex;
-    margin-bottom: 5px;
-  }
-  
-  #criarConta p {
-    font-family: Montserrat;
-    margin: 16px 0;
-  }
-  #criarConta .inputs-box {
+  .inputs-box {
     display: flex;
     flex-direction: column;
+    padding: 20px 0;
   }
-  
-  #criarConta .inputs-box input[type="text"],[type="password"] {
-    flex: 1;
+
+  #criarConta label,
+  #criarConta input[type="text"],
+  #criarConta input[type="password"],
+  #criarConta .button {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #criarConta input[type="text"],
+  #criarConta input[type="password"] {
     padding: 10px;
     border: 1px solid #ccc;
     font-family: Montserrat;
     margin-bottom: 20px;
   }
-  #criarConta .button {
-    width: 100%;
-    font-family: "Montserrat";
-    font-weight: 400;
-    background-color: black;
-    color: #fff;
-    padding: 12px 16px;
-    transition: 150ms;
-    font-size: 1.1em;
-    border: 1px solid rgb(0, 0, 0);
+  .links-cad {
+    flex-direction: column;
+    width: 80%;
+    margin: 4px auto;
+    padding: 0;
   }
-  
-  #criarConta .button:hover {
-    background-color: #f3f3f3;
-    color: #000;
-    cursor: pointer;
+  .links-cad .link {
+    padding: 2px 0;
   }
-
- 
-  
-  
-  
+}
+@media (width < 400px) {
+  #criarConta.container-box {
+    max-width: 240px;
+  }
+}

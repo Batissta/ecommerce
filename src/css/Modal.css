@@ -16,10 +16,11 @@
   text-align: center;
   color: black;
   padding: 20px;
+  font-family: "Montserrat";
 }
 
 .modal .menu a::after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   bottom: 0;
@@ -62,13 +63,13 @@
     animation: show 0.3s;
     color: rgb(29, 29, 29);
     font-weight: 600;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     padding: 4px 8px;
     display: flex;
   }
   .modal .menu a::after {
     animation: show 0.3s;
-    content: '';
+    content: "";
     background: rgb(29, 29, 29);
     height: 1px;
     width: 80%;

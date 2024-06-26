@@ -5,6 +5,7 @@
 /* components */
 @import "./global.css";
 @import "./Header.css";
+@import "./Footer.css";
 @import "./Loading.css";
 @import "./ProdutoComponent.css";
 

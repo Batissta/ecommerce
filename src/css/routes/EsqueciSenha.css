@@ -49,4 +49,48 @@
   cursor: pointer;
 }
 
+@media (width < 600px) {
+  #esqueceu.container-box {
+    display: grid;
+    padding: 40px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .inputs-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+  }
 
+  #esqueceu label,
+  #esqueceu input[type="text"],
+  #esqueceu input[type="password"],
+  #esqueceu .button {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #esqueceu input[type="text"],
+  #esqueceu input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: Montserrat;
+    margin-bottom: 20px;
+  }
+  .links-cad {
+    flex-direction: column;
+    width: 80%;
+    margin: 4px auto;
+    padding: 0;
+  }
+  .links-cad .link {
+    padding: 2px 0;
+  }
+}
+@media (width < 400px) {
+  #esqueceu.container-box {
+    padding: 80px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
