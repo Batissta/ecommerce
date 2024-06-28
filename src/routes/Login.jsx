@@ -14,12 +14,16 @@ const Login = () => {
     setTentativas((n) => n + 1);
 
     // const response = await fetch("http://localhost:3003/sistema/clientes");
+    // const data = await response.json();
+    // const exists = data.some((e) => {
+    //   return e.email === email.toLowerCase().trim() && e.senha === senha;
+    // });
     const response = await fetch(
       'https://batissta.github.io/ecommerce-backend/usuarios.json',
     );
     const data = await response.json();
     const exists = data.some((e) => {
-      return e.email === email.toLowerCase().trim() && e.senha === senha;
+      return e.email === email.toLowerCase().trim() && e.password === senha;
     });
     if (exists) {
       setAutorizado(true);
