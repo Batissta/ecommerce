@@ -1,6 +1,7 @@
-import React from "react";
-import "../css/Modal.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import menuHamburguer from '../assets/cardapio.png';
+import '../css/Modal.css';
+import { Link } from 'react-router-dom';
 
 const Modal = ({ mobile }) => {
   const [ativo, setAtivo] = React.useState(false);
@@ -11,22 +12,22 @@ const Modal = ({ mobile }) => {
     <>
       {mobile && (
         <button
-          className={`buttonMenu ${ativo && "ativo"}`}
+          className={`buttonMenu ${ativo && 'ativo'}`}
           onClick={handleClick}
         >
-          <img src="src\assets\cardapio.png" alt="" />
+          <img src={menuHamburguer} alt="" />
         </button>
       )}
       {(!mobile || ativo) && (
         <nav className="modal">
           <ul className="menu">
             <li>
-              <Link className="link" to="/" style={{ display: "block" }}>
+              <Link className="link" to="/" style={{ display: 'block' }}>
                 Home
               </Link>
             </li>
             <li>
-              <Link className="link" to="/login" style={{ display: "block" }}>
+              <Link className="link" to="/login" style={{ display: 'block' }}>
                 Login
               </Link>
             </li>
@@ -34,7 +35,7 @@ const Modal = ({ mobile }) => {
               <Link
                 className="link"
                 to="/desenvolvimento"
-                style={{ display: "block" }}
+                style={{ display: 'block' }}
               >
                 Carrinho
               </Link>

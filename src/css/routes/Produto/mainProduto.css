@@ -9,18 +9,19 @@
   grid-template-columns: 1fr 1fr;
   padding: 0 60px;
   gap: 60px;
-  /* align-items: center; */
+  margin-bottom: 40px;
 }
 
 .imagensArea {
-  height: calc(100vh - 64px);
-  padding: 0 24px;
+  height: calc(100vh - 128px);
+  margin: 32px auto;
+  padding: 0;
   overflow-y: scroll;
   scroll-snap-type: y proximity;
 }
 .imagensArea img {
-  height: calc(100vh - 64px);
-  width: 70%;
+  height: calc(100vh - 128px);
+  width: 100%;
   margin: 0 auto;
   object-fit: cover;
   scroll-snap-align: start;
@@ -64,13 +65,18 @@
 .produtoContent .title .favBtn {
   cursor: pointer;
 }
-.produtoContent .title img {
+
+.produtoContent .title button {
   position: relative;
   bottom: 1px;
   height: 20px;
   width: 20px;
 }
 
+.produtoContent .title button img {
+  min-height: 20px;
+  min-width: 20px;
+}
 .produtoContent .preco {
   font-family: 'Montserrat';
   font-weight: 800;
