@@ -10,7 +10,6 @@ import ErrorPage from './routes/ErrorPage.jsx';
 import ReactDOM from 'react-dom/client';
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 // css
 import './css/style.css';

@@ -15,10 +15,9 @@ const Login = () => {
 
     // const response = await fetch("http://localhost:3003/sistema/clientes");
     const response = await fetch(
-      'https://batissta.github.io/ecommerce-backend/clientes.json',
+      'https://batissta.github.io/ecommerce-backend/usuarios.json',
     );
     const data = await response.json();
-    console.log(data);
     const exists = data.some((e) => {
       return e.email === email.toLowerCase().trim() && e.senha === senha;
     });
