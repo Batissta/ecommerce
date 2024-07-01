@@ -1,42 +1,45 @@
 import React from 'react';
+import { GlobalContext } from '../GlobalContext';
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../components/Loading';
 
 const Login = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = React.useState(false);
   const [email, setEmail] = React.useState('');
   const [senha, setSenha] = React.useState('');
-  const [autorizado, setAutorizado] = React.useState(false);
   const [tentativas, setTentativas] = React.useState(0);
-  const [loading, setLoading] = React.useState(false);
-  const getUsers = async () => {
+  const [usuarios, setUsuarios] = React.useState([]); // talvez jogar isso para o GlobalContext e utilizar um useMemo
+
+  const global = React.useContext(GlobalContext);
+
+  const getUsers = () => {
     setLoading(true);
     setTentativas((n) => n + 1);
-
-    // const response = await fetch("http://localhost:3003/sistema/clientes");
-    // const data = await response.json();
-    // const exists = data.some((e) => {
-    //   return e.email === email.toLowerCase().trim() && e.senha === senha;
-    // });
-    const response = await fetch(
-      'https://batissta.github.io/ecommerce-backend/usuarios.json',
-    );
-    const data = await response.json();
-    const exists = data.some((e) => {
+    const user = usuarios.find((e) => {
       return e.email === email.toLowerCase().trim() && e.password === senha;
     });
-    if (exists) {
-      setAutorizado(true);
-      navigate('/');
+    if (user) {
+      global.logIn(user);
     } else {
       setLoading(false);
     }
   };
 
+  React.useEffect(() => {
+    if (global.usuario) {
+      navigate('/');
+    }
+  }, [global.usuario]);
+  React.useEffect(() => {
+    fetch('https://batissta.github.io/ecommerce-backend/usuarios.json')
+      .then((res) => res.json())
+      .then((json) => setUsuarios(json));
+  }, []);
   return (
     <>
       <section id="login" className="container-box login">
-        <form id="login-form" method="post">
+        <form id="login-form" onSubmit={(e) => e.preventDefault()}>
           <h1>LOGIN</h1>
           {!loading && (
             <div className="inputs-box">
@@ -64,12 +67,12 @@ const Login = () => {
           )}
 
           {!loading && (
-            <button className="button" onClick={getUsers}>
+            <button type="submit" className="button" onClick={getUsers}>
               Entrar
             </button>
           )}
 
-          {!autorizado && tentativas > 0 && !loading && (
+          {!global.logado && tentativas > 0 && !loading && (
             <p style={{ color: 'red', paddingTop: '4px' }}>
               Endereço de email ou senha estão incorretos.
             </p>
